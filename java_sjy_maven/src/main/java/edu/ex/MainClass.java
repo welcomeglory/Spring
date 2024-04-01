@@ -64,7 +64,29 @@ public class MainClass {
 		//4B객체인데 Pencil
 		Pencil Pencil = (Pencil)ctx.getBean("pencil");
 		Pencil.use();		
+		//===================================
+		ctx = new GenericXmlApplicationContext("classpath:appCTX4.xml","classpath:appCTX5.xml");
+		Student student1 = (Student)ctx.getBean("student1");
 		
+		System.out.println(student1.getName());
+		System.out.println(student1.getHobbys());
+		
+		StudentInfo studentInfo = (StudentInfo)ctx.getBean("studentInfo1");
+		
+		Student student2 = studentInfo.getStudent();
+		
+//		System.out.println(student1);
+//		System.out.println(student2);
+
+		if(student1 == student2) {
+			System.out.println("같습니다. ");
+		}
+		Student student3 = (Student)ctx.getBean("student2");
+		if(student2 == student3) {
+			System.out.println("같습니다. ");
+		}else {
+			System.out.println("같지 않습니다. ");
+		}
 		
 	}
 }
