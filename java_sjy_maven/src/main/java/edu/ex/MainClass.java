@@ -50,5 +50,14 @@ public class MainClass {
 		System.out.println("총점 : "+grade.getSum());
 		System.out.println("평균 : "+grade.getAvg());
 		
+		//===================================
+		ctx = new GenericXmlApplicationContext("classpath:appCTX2.xml");
+		MyInfo myinfo = (MyInfo)ctx.getBean("myinfo");
+//		System.out.println(myinfo.getName());
+//		System.out.println(myinfo.getHeight());
+//		System.out.println(myinfo.getWeight());
+//		System.out.println(myinfo.getHobbys());		
+		
+		myinfo.getInfo();
 	}
 }
