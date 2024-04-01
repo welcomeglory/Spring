@@ -59,5 +59,12 @@ public class MainClass {
 //		System.out.println(myinfo.getHobbys());		
 		
 		myinfo.getInfo();
+		//===================================
+		ctx = new GenericXmlApplicationContext("classpath:appCTX3.xml");
+		//4B객체인데 Pencil
+		Pencil Pencil = (Pencil)ctx.getBean("pencil");
+		Pencil.use();		
+		
+		
 	}
 }
