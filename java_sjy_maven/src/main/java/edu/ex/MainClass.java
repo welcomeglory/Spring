@@ -81,6 +81,7 @@ public class MainClass {
 		if(student1 == student2) {
 			System.out.println("같습니다. ");
 		}
+		
 		Student student3 = (Student)ctx.getBean("student2");
 		if(student2 == student3) {
 			System.out.println("같습니다. ");
