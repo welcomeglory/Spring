@@ -35,5 +35,20 @@ public class MainClass {
 		
 		myCalculator.add();
 		myCalculator.sub();
+		
+		//====================================
+		//빈 객체 받아옴.(빈 아이디와 통일)
+		Grade grade =(Grade) ctx.getBean("grade");		
+		//프로퍼티 값 확인
+		System.out.println("총점 : "+grade.getSum());
+		System.out.println("평균 : "+grade.getAvg());
+		
+		grade.setEng(70);
+		grade.setKor(70);
+		grade.setMath(70);		
+		
+		System.out.println("총점 : "+grade.getSum());
+		System.out.println("평균 : "+grade.getAvg());
+		
 	}
 }
