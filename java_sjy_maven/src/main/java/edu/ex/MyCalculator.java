@@ -1,11 +1,12 @@
 package edu.ex;
 
-public class Calculator {
+public class MyCalculator {
 	
+	private Calculator calculator;
 	private int firstNum;
 	private int secondNum;
 	
-	public Calculator() {}
+	public MyCalculator() {}
 
 	public int getFirstNum() {
 		return firstNum;
@@ -23,16 +24,19 @@ public class Calculator {
 		this.secondNum = secondNum;
 	}
 
+	public Calculator getCalculator() {
+		return calculator;
+	}
+
+	public void setCalculator(Calculator calculator) {
+		this.calculator = calculator;
+	}
+
 	public void add() {
-		System.out.println("add()..");
-		int result = firstNum + secondNum;
-		System.out.println(firstNum + "+" + secondNum + "=" + result);
+		calculator.add();
 	}
 
 	public void sub() {
-		System.out.println("sub()..");
-		int result = firstNum - secondNum;
-		System.out.println(firstNum + "-" + secondNum + "=" + result);
+		calculator.sub();
 	}
-
 }

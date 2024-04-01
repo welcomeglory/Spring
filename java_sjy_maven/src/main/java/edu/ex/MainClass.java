@@ -27,5 +27,13 @@ public class MainClass {
 
 		calculator.add();
 		calculator.sub();
+		//객체 생성
+		MyCalculator myCalculator =(MyCalculator) ctx.getBean("myCalculator");
+		System.out.println(myCalculator);	
+		System.out.println(myCalculator.getFirstNum());	
+		System.out.println(myCalculator.getSecondNum());	
+		
+		myCalculator.add();
+		myCalculator.sub();
 	}
 }
