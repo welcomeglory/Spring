@@ -74,10 +74,7 @@ public class MainClass {
 		StudentInfo studentInfo = (StudentInfo)ctx.getBean("studentInfo1");
 		
 		Student student2 = studentInfo.getStudent();
-		
-//		System.out.println(student1);
-//		System.out.println(student2);
-
+	
 		if(student1 == student2) {
 			System.out.println("같습니다. ");
 		}
@@ -88,6 +85,9 @@ public class MainClass {
 		}else {
 			System.out.println("같지 않습니다. ");
 		}
-		
+		//================================================
+		ctx = new GenericXmlApplicationContext("classpath:appCTX6.xml");
+		Shape shape = (Shape) ctx.getBean("shape");
+		shape.getArea();		
 	}
 }
