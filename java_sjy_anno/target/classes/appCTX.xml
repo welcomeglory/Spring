@@ -5,8 +5,8 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
 		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd">
 
-<!--  <context:annotation-config/>
-<bean class="edu.ex.ApplicationConfig2"/>-->
+ <context:annotation-config/>
+<!--<bean class="edu.ex.ApplicationConfig2"/>-->
 
 	<bean id="student2" class="edu.ex.Student">
 		<constructor-arg value="백현우"></constructor-arg>

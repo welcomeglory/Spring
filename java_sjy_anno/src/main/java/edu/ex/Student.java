@@ -1,8 +1,9 @@
 package edu.ex;
-
 import java.util.ArrayList;
+import org.springframework.beans.factory.DisposableBean;
+import org.springframework.beans.factory.InitializingBean;
 
-public class Student{
+public class Student implements InitializingBean, DisposableBean{
 	private String name;
 	private int age;
 	private ArrayList<String> hobbys;
@@ -58,6 +59,11 @@ public class Student{
 		this.weight = weight;
 	}
 	
-	
-	
+	public void destroy() throws Exception {
+		System.out.println("destroy()..");
+	}
+
+	public void afterPropertiesSet() throws Exception {
+		System.out.println("afterPropertiesSet()..");	
+	}	
 }
