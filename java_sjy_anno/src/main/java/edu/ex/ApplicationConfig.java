@@ -5,10 +5,19 @@ import java.util.ArrayList;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
+//Indicates that a class declares one or more 
+//@Bean methods and may be processedby 
+//the Spring container to generate bean definitions and 
+//service requests for thosebeans at runtime, for example: 
+
+//시멘틱 태그(nav = (div+메뉴))
+@Configuration //@Component(new)  + 설정 의미
 public class ApplicationConfig {
-   
-   @Bean
+	
+	// Indicates that a method produces a bean to be managed by the Spring container.
+	// The names and semantics of the attributes to this annotation are intentionallysimilar to those of the <bean/> element in the Spring XML schema. Forexample: 
+	//	<bean id="student1" class="edu.ex.Student">이것과 동일한 작업
+	@Bean // 함수이름이 변수 명이 됨. Student student1 = new ~~~ 
    public Student student1() {
       ArrayList<String> hobbys = new ArrayList<String>();
       hobbys.add("수영");
