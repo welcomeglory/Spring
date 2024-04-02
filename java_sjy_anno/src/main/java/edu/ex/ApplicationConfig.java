@@ -64,11 +64,10 @@ public class ApplicationConfig {
    }
    @Bean
    public Grade grade() {
-
 	   Grade grade = new Grade();
 	   grade.setKor(80);
 	   grade.setEng(70);
-	   grade.setMath(70);   
+	   grade.setMath(70);
       
       return grade;
    }
